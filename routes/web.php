@@ -4,6 +4,7 @@ use App\Http\Controllers\Cart\CartController;
 use App\Http\Controllers\Cart\LaterController;
 use App\Http\Controllers\CouponController;
 use App\Http\Controllers\ShopController;
+use App\Http\Controllers\Backend\OrganizationController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -48,3 +49,9 @@ Route::delete('/coupon', [CouponController::class, 'destroy'])->name('coupon.des
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
+
+
+/**
+ * For Admin Route
+ */
+
